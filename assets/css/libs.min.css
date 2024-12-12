@@ -4579,7 +4579,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .photo-slice:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  }
+  } 
   
   /* Animation */
   @keyframes fadeIn {
@@ -4594,83 +4594,25 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   /* Nhận xét từ Quản Trị Viên */
-.admin-comments {
-    background: linear-gradient(145deg, #ffedf3, #ffe3e9);
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    animation: slideIn 0.8s ease-in-out;
-  }
-  
-  .comments-title {
-    font-size: 1.6rem;
-    font-weight: bold;
-    text-align: center;
-    color: #d0006f;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    position: relative;
-  }
-  
-  .comments-title::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background: #d0006f;
-    margin: 8px auto 0 auto;
-    border-radius: 2px;
-  }
-  
-  .comments-content {
-    color: #444;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  .highlight-text {
-    font-size: 1.1rem;
-    font-style: italic;
-    color: #d0006f;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .comment-note {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #555;
-    background: #fff;
-    padding: 10px 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
 
-  .cover-photo {
+ 
+  
+  .profile-image-wrapper {
     position: relative;
-    height: 300px;
-    overflow: hidden;
   }
   
-  .cover-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* Profile Header */
   .profile-header {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 20px;
+    padding: 40px;
     background: #fff;
     position: relative;
-    margin-top: -50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
+  /* Ảnh đại diện */
   .profile-image-wrapper {
     position: relative;
   }
@@ -4694,112 +4636,101 @@ svg.leaflet-image-layer.leaflet-interactive path {
     right: 10px;
   }
   
+  /* Tên và tuổi */
   .profile-name {
     font-size: 1.5em;
     color: #333;
   }
   
   .age {
-    font-size: 1em;
+    font-size: 0.5em;
     color: #777;
   }
   
-  .friends-info {
+  /* Nút Follow */
+  .follow-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.9em;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .follow-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .follow-button.following {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .follow-button.following:hover {
+    background-color: #1e7a33;
+  }
+  
+  /* .friends-info {
     font-size: 0.9em;
     color: #666;
     margin-top: 5px;
   }
   
   /* Navigation Tabs */
-  .profile-tabs {
+ /* Profile Tabs */
+/* Profile Tabs */
+.profile-tabs {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly; /* Điều chỉnh khoảng cách đều nhau */
     background: #f1f1f1;
     border-bottom: 1px solid #ddd;
+
   }
   
   .tab-button {
-    padding: 10px 15px;
-    background: transparent;
+    background: none;
     border: none;
+    padding: 15px 50px; /* Tăng khoảng cách giữa các chữ */
     font-size: 1em;
-    font-weight: bold;
+    color: #333;
     cursor: pointer;
     transition: all 0.3s ease;
+    position: relative;
   }
   
   .tab-button:hover,
   .tab-button.active {
     color: #007bff;
-    border-bottom: 2px solid #007bff;
   }
   
-  /* Information Section */
-  .info-section {
-    padding: 20px;
+  .tab-button:hover::after,
+  .tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #007bff;
+  }
+  .tabs-content {
     background: #fff;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .info-section h2 {
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .info-section p {
-    font-size: 1em;
-    color: #555;
-    margin: 8px 0;
-  }
-  
-  .info-section strong {
-    color: #d11a7b;
-  }
-  
-  /* VIP Highlight */
-  .sugar-vip {
-    font-weight: bold;
-    color: #d11a7b;
-  }
-  
-  /* Contact Section */
-  .contact-info {
     padding: 20px;
-    background: #fff;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-info p {
-    font-size: 1em;
-    color: #555;
-  }
-  
-  .contact-link {
-    color: #d11a7b;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .contact-link:hover {
-    text-decoration: underline;
-  }
-  
-  .contact-button {
-    background: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
+    border: 1px solid #ddd;
     margin-top: 10px;
-    transition: all 0.3s ease;
   }
   
-  .contact-button:hover {
-    background: #0056b3;
+  .tab {
+    display: none; /* Ẩn tất cả tab theo mặc định */
+  }
+  
+  .tab.active {
+    display: block; /* Hiển thị tab được chọn */
   }
